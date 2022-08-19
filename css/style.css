@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "lato";
+    src: url("/font/lato/LATO-LIGHT.TTF");
+}
+:root {
+    --debug: rgba(255,0,0,.4);
+    --default-background: lavender;
+    --home-background: aliceblue;
+    --gcaci-color-1: #fefae0;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--default-background);
+
+    height: 100vh;
+    width: 100vw;
+}
+.main_wrapper {
+    position: static;
+    z-index: auto;
+
+    display: block;
+    height: 100vh;
+    width: 100vw;
+
+    scroll-snap-type: y mandatory;
+}
+.navigator_wrapper {
+    position: fixed;
+    z-index: auto;
+    top: 0;
+    left: 0;
+
+    display: flex;
+}
+.home {
+    position: static;
+    z-index: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: var(--home-background);
+
+    scroll-snap-align: center;
+}
+.home_title {
+    position: absolute;
+    z-index: 69;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding: 20px 20px 20px 40px;
+    
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: "lato";
+    text-shadow: 2px 2px 1px var(--gcaci-color-1);
+
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.home_title::after {
+    content: "__";
+    animation: blink 1s ease infinite alternate;
+}
+.home_notice {
+    position: absolute;
+    z-index: 70;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 20px 20px 20px 20px;
+    
+    width: 90%;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: "lato";
+    text-shadow: 2px 2px 1px var(--gcaci-color-1);
+
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border-radius: 9999px;
+
+    animation: insert 1s ease;
+}
+.home_image {
+    position: static;
+    z-index: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 700;
+    font-family: "lato";
+
+    background-image: url("/img/gcaci/genesis_snow.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 10% center;
+    background-size: cover;
+
+    filter: blur(4px);
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes insert {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
