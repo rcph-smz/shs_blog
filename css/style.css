@@ -34,11 +34,38 @@ body {
 }
 .navigator_wrapper {
     position: fixed;
-    z-index: auto;
+    z-index: 71;
     top: 0;
-    left: 0;
+    right: calc(-1 * clamp(300px,40vw,100%));
 
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 40vw;
+    min-width: 300px;
+
+    background-color: rgba(255, 0, 0, 0.35);
+
+    transition: all .6s;
+
+}
+.navigator_switch {
+    position: absolute;
+    top: 0;
+    right: clamp(300px,40vw,100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    aspect-ratio: 1/1;
+
+    background-color: green;
+
+    color: white;
+
+    transition: transform 1s ease;
 }
 .home {
     position: static;
@@ -75,9 +102,9 @@ body {
     text-shadow: 2px 2px 1px var(--gcaci-color-1);
 
     color: aliceblue;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
 }
-.home_title::after {
+.home_title::after , .home_notice::after {
     content: "__";
     animation: blink 1s ease infinite alternate;
 }
@@ -98,7 +125,7 @@ body {
     text-shadow: 2px 2px 1px var(--gcaci-color-1);
 
     color: aliceblue;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
 
     border-radius: 9999px;
 
@@ -118,7 +145,7 @@ body {
     font-weight: 700;
     font-family: "lato";
 
-    background-image: url("/img/gcaci/genesis_snow.jpg");
+    background-image: url("../img/gcaci/genesis_snow.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 10% center;
