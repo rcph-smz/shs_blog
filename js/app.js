@@ -13,3 +13,8 @@ navigator_switch.addEventListener("click",() => {
         navigator_switch_boolean = true
     }
 })
+
+
+// redirect because they're supposed to be here
+
+if(location.port != 5500) location.replace("https://youtu.be/dQw4w9WgXcQ")

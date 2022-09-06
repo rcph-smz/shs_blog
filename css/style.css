@@ -2,11 +2,17 @@
     font-family: "lato";
     src: url("/font/lato/LATO-LIGHT.TTF");
 }
+@font-face {
+    font-family: "mochiy_pop_one";
+    src: url("/font/mochiy_pop_one/MOCHIYPOPONE-REGULAR.TTF");
+}
 :root {
     --debug: rgba(255,0,0,.4);
     --default-background: lavender;
     --home-background: aliceblue;
     --gcaci-color-1: #fefae0;
+
+    scroll-snap-type: y mandatory;
 }
 *::-webkit-scrollbar {
     display: none;
@@ -17,7 +23,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: var(--default-background);
+    background-color: lavender;
 
     height: 100vh;
     width: 100vw;
@@ -45,7 +51,7 @@ body {
     width: 40vw;
     min-width: 300px;
 
-    background-color: rgba(255, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.4);
 
     transition: all .6s;
 
@@ -58,10 +64,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
+
+    height: 5vw;
+    min-height: 50px;
+    max-height: 60px;
+
     aspect-ratio: 1/1;
 
-    background-color: green;
+    font-size: 1.5em;
+    font-family: "mochiy_pop_one";
+
+    background-color: black;
 
     color: white;
 
@@ -79,7 +92,7 @@ body {
     height: 100vh;
     width: 100vw;
 
-    background-color: var(--home-background);
+    background-color: aliceblue;
 
     scroll-snap-align: center;
 }
@@ -96,16 +109,20 @@ body {
     padding: 20px 20px 20px 40px;
     
     width: 100%;
-    font-size: 1.5em;
-    font-weight: 700;
-    font-family: "lato";
-    text-shadow: 2px 2px 1px var(--gcaci-color-1);
+    height: 5vw;
+    min-height: 50px;
+    max-height: 60px;
+
+    font-size: 1.2em;
+    font-weight: 100;
+    font-family: "mochiy_pop_one";
+    text-shadow: 2px 2px 1px gray;
 
     color: aliceblue;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .home_title::after , .home_notice::after {
-    content: "__";
+    content: " ​ ​__";
     animation: blink 1s ease infinite alternate;
 }
 .home_notice {
@@ -119,15 +136,21 @@ body {
     padding: 20px 20px 20px 20px;
     
     width: 90%;
-    font-size: 1.5em;
-    font-weight: 700;
-    font-family: "lato";
-    text-shadow: 2px 2px 1px var(--gcaci-color-1);
+
+    height: 5vw;
+    min-height: 50px;
+    max-height: 60px;
+
+    font-size: 1.2em;
+    font-weight: 100;
+    font-family: "mochiy_pop_one";
+    text-shadow: 2px 2px 1px gray;
+    font-style: oblique;
 
     color: aliceblue;
     background-color: rgba(0, 0, 0, 0.8);
 
-    border-radius: 9999px;
+    border-radius: 2px;
 
     animation: insert 1s ease;
 }
@@ -151,7 +174,8 @@ body {
     background-position: 10% center;
     background-size: cover;
 
-    filter: blur(4px);
+    /* filter: blur(4px); */
+    filter: saturate(.1);
 }
 
 @keyframes blink {
