@@ -2,10 +2,6 @@
     font-family: "lato";
     src: url("/font/lato/LATO-LIGHT.TTF");
 }
-@font-face {
-    font-family: "mochiy_pop_one";
-    src: url("/font/mochiy_pop_one/MOCHIYPOPONE-REGULAR.TTF");
-}
 :root {
     --debug: rgba(255,0,0,.4);
     --default-background: lavender;
@@ -35,8 +31,6 @@ body {
     display: block;
     height: 100vh;
     width: 100vw;
-
-    scroll-snap-type: y mandatory;
 }
 .navigator_wrapper {
     position: fixed;
@@ -115,11 +109,11 @@ body {
 
     font-size: 1.2em;
     font-weight: 100;
-    font-family: "mochiy_pop_one";
-    text-shadow: 2px 2px 1px gray;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 1px black;
 
-    color: aliceblue;
-    background-color: rgba(0, 0, 0, 0.6);
+    color: black;
+    background-color: lavender;
 }
 .home_title::after , .home_notice::after {
     content: " ​ ​__";
@@ -143,12 +137,11 @@ body {
 
     font-size: 1.2em;
     font-weight: 100;
-    font-family: "mochiy_pop_one";
-    text-shadow: 2px 2px 1px gray;
-    font-style: oblique;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 1px black;
 
-    color: aliceblue;
-    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+    background-color: lavender;
 
     border-radius: 2px;
 
@@ -174,8 +167,21 @@ body {
     background-position: 10% center;
     background-size: cover;
 
-    /* filter: blur(4px); */
-    filter: saturate(.1);
+    
+}
+.class_schedules {
+    position: static;
+    z-index: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    height: 100vh;
+    width: 100vw;
+
+    scroll-snap-align: center;
 }
 
 @keyframes blink {
