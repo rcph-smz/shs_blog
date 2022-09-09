@@ -1,15 +1,38 @@
-let navigator_switch_boolean
+const app_abstract = document.querySelector("[data-app-abstract]")
 
-const navigator_switch = document.querySelector("[data-navigator-switch]")
-const navigator_wrapper = document.querySelector("[data-navigator-wrapper]")
+function randint(min,max) {
+    return Math.floor(Math.random() * (max - min)) + min
+}
 
-navigator_switch.addEventListener("click",() => {
-    if(navigator_switch_boolean) {
-        navigator_wrapper.style.right = `calc(-1 * clamp(300px,40vw,100%))`
-        navigator_switch_boolean = false
+const magnifying_abstract = (() => {
+    let quantity = 2
+    const objects = []
+
+    for(let i = 0; i < quantity; ++i){
+        const object = document.createElement("img")
+        object.src = "img/loupe.png"
+        object.setAttribute("class","app-abstract-loupe")
+
+        app_abstract.appendChild(object)
+        objects.push(object)
     }
-    else {
-        navigator_wrapper.style.right = `0`
-        navigator_switch_boolean = true
+
+    return objects
+})()
+
+function manifest_abstract(objects) {
+    try {
+        for(object of objects){
+            object.style.cssText = `    
+            top: calc(${randint(10,90)}% + clamp(50px,5vw,60px));
+            left: ${randint(10,60)}%;
+            `
+        }
     }
-})
+    catch {
+        throw new Error()
+    }
+}
+setInterval(() => {
+    manifest_abstract(magnifying_abstract)
+}, 4000);

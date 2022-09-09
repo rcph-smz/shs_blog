@@ -1,202 +1,200 @@
-@font-face {
-    font-family: "lato";
-    src: url("/font/lato/LATO-LIGHT.TTF");
-}
-:root {
-    --debug: rgba(255,0,0,.4);
-    --default-background: lavender;
-    --home-background: aliceblue;
-    --gcaci-color-1: #fefae0;
-
-    scroll-snap-type: y mandatory;
-}
-*::-webkit-scrollbar {
-    display: none;
-}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+    display: none;
+}
+*::selection {
+    background-color: black;
+    color: snow;
+}
 body {
     background-color: lavender;
-
-    height: 100vh;
-    width: 100vw;
 }
-.main_wrapper {
-    position: static;
-    z-index: auto;
-
+.app-wrapper {
     display: block;
     height: 100vh;
     width: 100vw;
 }
-.navigator_wrapper {
-    position: fixed;
-    z-index: 71;
-    top: 0;
-    right: calc(-1 * clamp(300px,40vw,100%));
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 40vw;
-    min-width: 300px;
-
-    background-color: rgba(0, 0, 0, 0.4);
-
-    transition: all .6s;
-
-}
-.navigator_switch {
+.app-background {
     position: absolute;
+    z-index: -1;
     top: 0;
-    right: clamp(300px,40vw,100%);
+    left: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 5vw;
-    min-height: 50px;
-    max-height: 60px;
-
-    aspect-ratio: 1/1;
-
-    font-size: 1.5em;
-    font-family: "mochiy_pop_one";
-
-    background-color: black;
-
-    color: white;
-
-    transition: transform 1s ease;
-}
-.home {
-    position: static;
-    z-index: auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
+    display: block;
     height: 100vh;
     width: 100vw;
 
-    background-color: aliceblue;
-
-    scroll-snap-align: center;
+    background-image: url("../img/genesis_school.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
-.home_title {
-    position: absolute;
-    z-index: 69;
+.app-navigation {
+    position: sticky;
+    z-index: 1;
     top: 0;
     left: 0;
 
     display: flex;
-    justify-content: start;
-    align-items: center;
-
-    padding: 20px 20px 20px 40px;
-    
-    width: 100%;
-    height: 5vw;
-    min-height: 50px;
-    max-height: 60px;
-
-    font-size: 1.2em;
-    font-weight: 100;
-    font-family: sans-serif;
-    text-shadow: 1px 1px 1px black;
-
-    color: black;
-    background-color: lavender;
-}
-.home_title::after , .home_notice::after {
-    content: " ​ ​__";
-    animation: blink 1s ease infinite alternate;
-}
-.home_notice {
-    position: absolute;
-    z-index: 70;
-
-    display: flex;
     justify-content: center;
     align-items: center;
-    
-    padding: 20px 20px 20px 20px;
-    
-    width: 90%;
 
+    max-height: 60px;
     height: 5vw;
     min-height: 50px;
-    max-height: 60px;
 
-    font-size: 1.2em;
-    font-weight: 100;
-    font-family: sans-serif;
-    text-shadow: 1px 1px 1px black;
-
-    color: black;
     background-color: lavender;
-
-    border-radius: 2px;
-
-    animation: insert 1s ease;
 }
-.home_image {
-    position: static;
-    z-index: auto;
-
+.app-header{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-grow: 1;
-
-    width: 100%;
-    font-size: 1.1em;
-    font-weight: 700;
-    font-family: "lato";
-
-    background-image: url("../img/gcaci/genesis_snow.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 10% center;
-    background-size: cover;
-
+    flex-basis: 40%;
     
-}
-.class_schedules {
-    position: static;
-    z-index: auto;
+    height: 100%;
 
+    text-indent: 3vw;
+    font-size: 1.3em;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.app-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    flex-grow: 1;
+    flex-basis: 60%;
+
+    height: 100%;
+    overflow: hidden;
+}
+.nth-menu {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    padding: 0 25px;
+
+    font-size: .9em;
+    font-family: 'Courier New', Courier, monospace;
+}
+.nth-menu:hover {
+    background-color: #282828;
+    color: lavender;
+}
+.app-introduction {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 
+    height: 100%;
+
+    translate: 0 calc(-1 * clamp(50px,5vw,60px));
+    overflow: hidden;
+}
+.app-introduction >div:nth-child(1),.app-introduction > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    flex-grow: 1;
+    
+    min-width: 300px;
+
+    height: 100%;
+
+    color: aliceblue;
+}
+.app-introduction > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: linear-gradient(90deg,rgba(50, 59, 129, 0.9),rgba(0, 0, 0, 0));
+}
+.app-introduction > div:nth-child(1) > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 500px;
+    height: 50vw;
+    max-height: 600px;
+
+    padding: 2.5vw 50px;
+
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 2.5em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.392),rgba(222, 222, 222, 0.2));
+    color: aliceblue;
+}
+.app-introduction > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.app-introduction > div:nth-child(2) > img {
+    width: 80%;
+    max-width: 400px;
+    min-width: 300px;
+}
+.app-introduction > div:nth-child(2) > div {
+
+    width: 80%;
+    max-width: 400px;
+    min-width: 300px;
+
+    text-align: center;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: black;
+}
+.app-abstract {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    
+    display: block;
     height: 100vh;
     width: 100vw;
 
-    scroll-snap-align: center;
+    pointer-events: none;
+}
+.app-abstract-loupe{
+    position: absolute;
+    top: clamp(50px,5vw,60px);
+    left: -100%;
+    
+    aspect-ratio: 1/1;
+    min-width: 50px;
+    width: 5vw;
+    max-width: 60px;
+
+    transition: all 1s ;
+    filter: invert(1) drop-shadow(1px 1px 1px black);
+    pointer-events: none;
 }
 
-@keyframes blink {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-@keyframes insert {
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0;
-    }
-}
+

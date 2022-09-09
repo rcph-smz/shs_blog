@@ -1,3 +1,2 @@
-## shs blog
-
-- don't touch xd
+## shs_blog
+- don't copy xd
