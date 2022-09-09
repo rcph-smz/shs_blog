@@ -5,7 +5,7 @@ function randint(min,max) {
 }
 
 const magnifying_abstract = (() => {
-    let quantity = 2
+    let quantity = 1
     const objects = []
 
     for(let i = 0; i < quantity; ++i){
@@ -24,8 +24,9 @@ function manifest_abstract(objects) {
     try {
         for(object of objects){
             object.style.cssText = `    
-            top: calc(${randint(10,90)}% + clamp(50px,5vw,60px));
-            left: ${randint(10,60)}%;
+            top: calc(${randint(0,90)}% + clamp(50px,5vw,60px));
+            left: ${randint(0,60)}%;
+            rotate: ${randint(0,360)}deg;
             `
         }
     }
