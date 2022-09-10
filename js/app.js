@@ -45,7 +45,8 @@ function set_tables(table_lists) {
 
         if(list[1].includes("https://","http://")) {
             nth_table.addEventListener("click",() => {
-                location.href = nth_table.getAttribute("data-nth-table")
+                // location.href = nth_table.getAttribute("data-nth-table")
+                open(nth_table.getAttribute("data-nth-table"))
             })
         }
         else {
