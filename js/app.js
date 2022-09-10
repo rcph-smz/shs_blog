@@ -35,17 +35,6 @@ function manifest_abstract(objects) {
         throw new Error()
     }
 }
-const dummy_list = [
-    ["Earth & Life Science","https://meet.google.com/unc-yezp-jve"],
-    ["Komunikasyon","https://meet.google.com/pku-nver-vze"],
-    ["Per. Dev.","https://meet.google.com/paz-zknd-rog"],
-    ["Gen Math","https://meet.google.com/one-kdym-xyd"],
-    ["Intro. of Philosophy","https://meet.google.com/awu-dkzo-ujo"],
-    ["Oral Comm.","https://meet.google.com/ssw-shfy-sbr"],
-    ["Pre-Calculus","https://meet.google.com/sfq-xrke-cxb"],
-    ["General Chemistry","https://meet.google.com/txj-yooa-mrn"],
-    ["PE","https://meet.google.com/gfn-sypq-qav"]
-]
 
 function set_tables(table_lists) {
     for(list of table_lists){
@@ -68,7 +57,17 @@ function set_tables(table_lists) {
         table_wrapper.appendChild(nth_table)
     }
 }
-set_tables(dummy_list)
+set_tables([
+    ["Earth & Life Science","https://meet.google.com/unc-yezp-jve"],
+    ["Komunikasyon","https://meet.google.com/pku-nver-vze"],
+    ["Per. Dev.","https://meet.google.com/paz-zknd-rog"],
+    ["Gen Math","https://meet.google.com/one-kdym-xyd"],
+    ["Intro. of Philosophy","https://meet.google.com/awu-dkzo-ujo"],
+    ["Oral Comm.","https://meet.google.com/ssw-shfy-sbr"],
+    ["Pre-Calculus","https://meet.google.com/sfq-xrke-cxb"],
+    ["General Chemistry","https://meet.google.com/txj-yooa-mrn"],
+    ["PE","https://meet.google.com/gfn-sypq-qav"]
+])
 
 
 setInterval(() => {
