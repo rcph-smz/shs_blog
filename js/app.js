@@ -68,7 +68,7 @@ set_tables([
     ["Pre-Calculus","https://meet.google.com/sfq-xrke-cxb"],
     ["General Chemistry","https://meet.google.com/txj-yooa-mrn"],
     ["PE","https://meet.google.com/gfn-sypq-qav"],
-    ["Player",
+    ["Prayer",
         `Lord, Almighty, we thank you for the gift of life. We thank you for the blessings that you have showered upon us. Forgive us for our mistake, as we forgive those who have mistaken against us. We pray for healing. We pray for peace. We pray for blessings. We ask for your guidance as we start our class for today. Keep us safe, Oh Lord. These we asked in the name of Jesus, Our Lord, Amen.`
     ]
 ])
