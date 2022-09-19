@@ -74,7 +74,10 @@ set_tables([
     ["Prayer_2",
         `Dear Lord and Father of all, Thank you for today. Thank you for ways in which you provide for us all. For Your protection and love we thank you. Help us to focus our hearts and minds now on what we are about to learn. Inspire us by Your Holy Spirit as we listen and write. Guide us by your eternal light as we discover more about the world around us. We ask all this in the name of Jesus. Amen.`
     ],
-    ["notes",`https://rcph-smz.github.io/shs_blog/notes`],
+    ["reminders,assignment,etc",
+        `https://rcph-smz.github.io/shs_blog/notes/reminder`],
+    ["my scripts",
+        `https://rcph-smz.github.io/shs_blog/notes/script`],
     ["Announcement",
         `Dear Genesian 
         Parents and Students 
@@ -120,7 +123,8 @@ set_tables([
         Understanding is a Virtue.
         
         The Admin.`
-    ]
+    ],
+    ["The blind side report",`https://www.canva.com/design/DAFMdrB-nYo/KmvU1ks7923EoVMMjCBa9g/view?utm_content=DAFMdrB-nYo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#6`]
 ])
 
 

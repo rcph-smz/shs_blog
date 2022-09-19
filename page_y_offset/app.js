@@ -120,7 +120,7 @@ const page_observe = new ScrollEvent()
 
 window.addEventListener("scroll",() => {
     for(i of query.findElementByQuery('.app-background').getQuery()){
-        i.style.backgroundPosition = `50% ${scrollEvent.pageY_Offset(i) * .1}px`
+        i.style.backgroundPosition = `50% calc( 50% + ${scrollEvent.pageY_Offset(i) * .1}px )`
     }
 })
 
