@@ -73,6 +73,53 @@ set_tables([
     ],
     ["Prayer_2",
         `Dear Lord and Father of all, Thank you for today. Thank you for ways in which you provide for us all. For Your protection and love we thank you. Help us to focus our hearts and minds now on what we are about to learn. Inspire us by Your Holy Spirit as we listen and write. Guide us by your eternal light as we discover more about the world around us. We ask all this in the name of Jesus. Amen.`
+    ],
+    ["notes",`https://rcph-smz.github.io/shs_blog/notes`],
+    ["Announcement",
+        `Dear Genesian 
+        Parents and Students 
+        
+        Take Note of the ...
+        CHANGES, CHANGES, CHANGES, CHANGES...
+        
+        Permanent Schedule 
+        MWF - Online Class
+        TTH - Limited F2F
+        First Meet up Tuesday
+        Sept. 27, 2022
+        ( Cancel Sets A & B )
+        
+        Sked of Prescribed Uniform
+        Tuesday - School Uniform 
+        Thursday - P.E. Uniform 
+        
+        REMINDER
+        1st M.A.T. Exam
+        September 29, 2022
+        Thursday 
+        
+        Deadline of Payment 
+        Sept. 23 - Friday
+        
+        Late Payment will not be accepted. Proceed to Special Exam + 200 pesos late payees. 
+        
+        Registrar's Office is
+        closed on that Day. 
+        
+        Rest Day - Sept. 30
+        For students only. 
+        
+        October 4 - Tuesday 
+        No classes 
+        PEAC Revisit 
+        Only chosen Teachers and Students is expected to be present on that day. 
+        
+        Obedience is a Virtue.
+        Patience is a Virtue.
+        Cooperation is a Virtue.
+        Understanding is a Virtue.
+        
+        The Admin.`
     ]
 ])
 
