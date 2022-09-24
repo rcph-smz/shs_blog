@@ -36,18 +36,6 @@ function manifest_abstract(objects) {
         throw new Error()
     }
 }
-try {
-    fetch("https://type.fit/api/quotes").then((res) => {
-        return res.json()
-    }).then(res => {
-        setInterval(() => {
-            _quotes_.textContent = `"${res[randint(0,res.length)].text}"`
-        }, 4000);
-    })
-}
-catch (err){
-    console.log("api quotes are not working")
-}
 
 function set_tables(table_lists) {
     for(list of table_lists){
@@ -141,6 +129,23 @@ set_tables([
 ])
 
 
-setInterval(() => {
-    manifest_abstract(magnifying_abstract)
-}, 4000);
+const intervals = function() {
+    try {
+        fetch("https://type.fit/api/quotes").then((res) => {
+            return res.json()
+        }).then(res => {
+            setInterval(() => {
+                _quotes_.textContent = `"${res[randint(0,res.length)].text}"`
+            }, 5000)
+            _quotes_.addEventListener("click",async () => {
+                await navigator.clipboard.writeText(_quotes_.textContent)
+            })
+        })
+    }
+    catch (err){
+        console.log("api quotes are not working")
+    }
+    setInterval(() => {
+        manifest_abstract(magnifying_abstract)
+    }, 5000)
+}()
