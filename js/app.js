@@ -1,5 +1,6 @@
 const app_abstract = document.querySelector("[data-app-abstract]")
 const table_wrapper = document.querySelector("[data-table-wrapper]")
+const _quotes_ = document.querySelector("[data-quotes]")
 
 const magnifying_abstract = (() => {
     let quantity = 1
@@ -34,6 +35,18 @@ function manifest_abstract(objects) {
     catch {
         throw new Error()
     }
+}
+try {
+    fetch("https://type.fit/api/quotes").then((res) => {
+        return res.json()
+    }).then(res => {
+        setInterval(() => {
+            _quotes_.textContent = `"${res[randint(0,res.length)].text}"`
+        }, 4000);
+    })
+}
+catch (err){
+    console.log("api quotes are not working")
 }
 
 function set_tables(table_lists) {
