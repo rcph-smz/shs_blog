@@ -62,7 +62,7 @@ function set_tables(table_lists) {
 set_tables([
     ["Earth & Life Science","https://meet.google.com/unc-yezp-jve"],
     ["Komunikasyon","https://meet.google.com/pku-nver-vze"],
-    ["Per. Dev.","https://meet.google.com/paz-zknd-rog"],
+    ["Per. Dev.","https://meet.google.com/ssw-shfy-sbr"],
     ["Gen Math","https://meet.google.com/one-kdym-xyd"],
     ["Intro. of Philosophy","https://meet.google.com/awu-dkzo-ujo"],
     ["Oral Comm.","https://meet.google.com/ssw-shfy-sbr"],
@@ -79,52 +79,6 @@ set_tables([
         `https://rcph-smz.github.io/shs_blog/notes/reminder`],
     ["my scripts",
         `https://rcph-smz.github.io/shs_blog/notes/script`],
-    ["Announcement",
-        `Dear Genesian 
-        Parents and Students 
-        
-        Take Note of the ...
-        CHANGES, CHANGES, CHANGES, CHANGES...
-        
-        Permanent Schedule 
-        MWF - Online Class
-        TTH - Limited F2F
-        First Meet up Tuesday
-        Sept. 27, 2022
-        ( Cancel Sets A & B )
-        
-        Sked of Prescribed Uniform
-        Tuesday - School Uniform 
-        Thursday - P.E. Uniform 
-        
-        REMINDER
-        1st M.A.T. Exam
-        September 29, 2022
-        Thursday 
-        
-        Deadline of Payment 
-        Sept. 23 - Friday
-        
-        Late Payment will not be accepted. Proceed to Special Exam + 200 pesos late payees. 
-        
-        Registrar's Office is
-        closed on that Day. 
-        
-        Rest Day - Sept. 30
-        For students only. 
-        
-        October 4 - Tuesday 
-        No classes 
-        PEAC Revisit 
-        Only chosen Teachers and Students is expected to be present on that day. 
-        
-        Obedience is a Virtue.
-        Patience is a Virtue.
-        Cooperation is a Virtue.
-        Understanding is a Virtue.
-        
-        The Admin.`
-    ],
     ["The blind side report",`https://www.canva.com/design/DAFMdrB-nYo/KmvU1ks7923EoVMMjCBa9g/view?utm_content=DAFMdrB-nYo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#6`]
 ])
 
