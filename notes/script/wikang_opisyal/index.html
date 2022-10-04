@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>note page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lavender;
+
+            height: 100vh;
+            width: 100vw;
+
+            overflow-x: hidden;
+        }
+        .note-object {
+            display: block;
+            background-color: aliceblue;
+        }
+        .note-title {
+            display: block;
+
+            text-indent: 3vw;
+            text-shadow: 1px 1px 1px black;
+            text-transform: capitalize;
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-color: bisque;
+            color: white;
+            padding: clamp(15px,1.5vw,25px);
+        }
+        .note-content-wrapper {
+            display: block;
+            
+            padding: clamp(30px,3vw,40px);
+        }
+        .note-content {
+            display: block;
+
+            text-indent: 3vw;
+            /* text-shadow: 1px 1px 1px white; */
+            word-wrap: break-word;
+            
+            margin: 20px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="note-object">
+        <div class="note-title">
+            our ppt
+        </div>
+        <div class="note-content-wrapper">
+            <div class="note-content">
+                https://www.canva.com/design/DAFN_37IBSU/y2xQLglNSB-xBRPWZ6OrnA/view?utm_content=DAFN_37IBSU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+            </div>
+        </div>
+    </div>
+    <div class="note-object">
+        <div class="note-title">
+            sources
+        </div>
+        <div class="note-content-wrapper">
+            <div class="note-content">
+                https://www.officialgazette.gov.ph/1968/03/27/memorandum-circular-no-172-s-1968/
+            </div>
+            <div class="note-content">
+                https://brainly.ph/question/2439186
+            </div>
+            <div class="note-content">
+                https://www.officialgazette.gov.ph/constitutions/ang-konstitusyon-ng-republika-ng-pilipinas-1987/#edukasyon
+            </div>
+        </div>
+    </div>
+    
+    <div class="note-object">
+        <div class="note-title">
+            - memorandun sirkular (MS) blg. 172
+        </div>
+        <div class="note-content-wrapper">
+            <!-- <div class="note-content">
+                Memorandum Sirkular (MS)
+
+                Blg. 172 
+
+                Marso 27, 1968
+
+                - Nag-aatas ng mahigit na pagsunod sa KT Blog. 96 at sa paggamit ng Pilipino sa mga opisyal na ulong-sulat (letterhead) at panunumpa sa katungkulan sa lahat ng opisina ng gobyerno
+            </div> -->
+            <!-- <div class="note-content">
+                DIRECTING STRICT COMPLIANCE WITH EXECUTIVE ORDER NO. 96, SERIES OF 1967, AND THE USE OF PILIPINO IN OFFICIAL LETTERHEADS AND IN OATHS OF OFFICE OF ALL GOVERNMENT OFFICIALS.
+            </div> -->
+            <div class="note-content">
+                nagdidirekta ng mahigpit na pagsunod sa Kautusang Tagapagpaganap Blg 96(executive order no. 96), serye ng 1967, at ang paggamit ng wikang pilipino sa mga opisyal na "letterhead"(header) at sa "panunumpa sa tungkulin"(oath) ng lahat ng opisyal ng pamahalaan.
+            </div>
+            <div class="note-content">
+                summary : nagpapahigpit ng Kautusang Tagapagpaganap Blg 96(executive order no. 96)
+            </div>
+        </div>
+    </div>
+    <div class="note-object">
+        <div class="note-title">
+            - artikulo XV, Seksyon 7
+        </div>
+        <div class="note-content-wrapper">
+            <!-- <div class="note-content">
+                Artikulong XV, Seksyon 7
+
+                Bilang Pag-alinsunod sa Konstitusyon 1987, na naglalahad na "Ukol sa mga layunin ng komunikasyon at pagtuturo, ang mga wikang Opisyal ng Pilipinas ay Filipino at Ingles hangga't walang itinadhana ang batas"
+            </div> -->
+            <div class="note-content">
+                Ukol sa mga layunin ng komunikasyon at pagtuturo, ang mga wikang opisyal ng Pilipinas ay Filipino at Ingles hangga’t walang ibang itinatadhana ang batas. Ang mga wikang pangrehiyon ay pantulong na mga wikang opisyal sa mga rehiyon at magsisilbi na pantulong na mga wikang panturo roon. Dapat itaguyod nang kusa at opsyonal ang Kastila at Arabic.
+            </div>
+            <div class="note-content">
+                summary : ang mga wikang opisyal ng Pilipinas ay Filipino at Ingles hangga’t walang ibang itinatadhana ang batas.
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        const note_contents = document.querySelectorAll(".note-content")
+        note_contents.forEach((item,index) => {
+            item.addEventListener("click",async e => {
+                await navigator.clipboard.writeText(e.target.textContent)
+            })
+        })
+    </script> -->
+</body>
+</html>
