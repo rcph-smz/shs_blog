@@ -75,11 +75,34 @@ set_tables([
     ["Prayer_2",
         `Dear Lord and Father of all, Thank you for today. Thank you for ways in which you provide for us all. For Your protection and love we thank you. Help us to focus our hearts and minds now on what we are about to learn. Inspire us by Your Holy Spirit as we listen and write. Guide us by your eternal light as we discover more about the world around us. We ask all this in the name of Jesus. Amen.`
     ],
+    ["Prayer_3",`
+    Loving Father, Thank you
+    
+    for all who are part of our school.  Please grant them your encouragement, wisdom and peace.
+    
+    Strengthen teachers
+    
+    with heavy workloads. May they be firm, yet patient, expecting excellence but forgiving mistakes.
+    
+    May they support their students, playing to strengths, helping with struggles and motivating them to do their best.
+    
+    Comfort and restore
+    
+    those living under shadows of unhappiness, abuse, pain or fear.  May many find faith discovering their identity in You and knowing Your amazing grace in their lives.
+    
+    Please pour out Your blessings
+    
+    upon our whole school community.
+    
+    In Jesus name.
+    
+    Amen`],
     ["reminders,assignment,etc",
         `https://rcph-smz.github.io/shs_blog/notes/reminder`],
     ["my scripts",
         `https://rcph-smz.github.io/shs_blog/notes/script`],
-    ["The blind side report",`https://www.canva.com/design/DAFMdrB-nYo/KmvU1ks7923EoVMMjCBa9g/view?utm_content=DAFMdrB-nYo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#6`]
+    ["The blind side report",`https://www.canva.com/design/DAFMdrB-nYo/KmvU1ks7923EoVMMjCBa9g/view?utm_content=DAFMdrB-nYo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#6`],
+    ["learn ai path","https://www.louisbouchard.ai/learnai/"]
 ])
 
 
