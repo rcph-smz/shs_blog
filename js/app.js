@@ -60,15 +60,6 @@ function set_tables(table_lists) {
     }
 }
 set_tables([
-    ["Earth & Life Science","https://meet.google.com/unc-yezp-jve"],
-    ["Komunikasyon","https://meet.google.com/pku-nver-vze"],
-    ["Per. Dev.","https://meet.google.com/ssw-shfy-sbr"],
-    ["Gen Math","https://meet.google.com/one-kdym-xyd"],
-    ["Intro. of Philosophy","https://meet.google.com/awu-dkzo-ujo"],
-    ["Oral Comm.","https://meet.google.com/ssw-shfy-sbr"],
-    ["Pre-Calculus","https://meet.google.com/sfq-xrke-cxb"],
-    ["General Chemistry","https://meet.google.com/txj-yooa-mrn"],
-    ["PE","https://meet.google.com/gfn-sypq-qav"],
     ["Prayer",
         `Lord, Almighty, we thank you for the gift of life. We thank you for the blessings that you have showered upon us. Forgive us for our mistake, as we forgive those who have mistaken against us. We pray for healing. We pray for peace. We pray for blessings. We ask for your guidance as we start our class for today. Keep us safe, Oh Lord. These we asked in the name of Jesus, Our Lord, Amen.`
     ],
@@ -101,7 +92,6 @@ set_tables([
         `https://rcph-smz.github.io/shs_blog/notes/reminder`],
     ["my scripts",
         `https://rcph-smz.github.io/shs_blog/notes/script`],
-    ["The blind side report",`https://www.canva.com/design/DAFMdrB-nYo/KmvU1ks7923EoVMMjCBa9g/view?utm_content=DAFMdrB-nYo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#6`],
     ["learn ai path","https://www.louisbouchard.ai/learnai/"]
 ])
 
