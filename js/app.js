@@ -92,7 +92,8 @@ set_tables([
         `https://rcph-smz.github.io/shs_blog/notes/reminder`],
     ["my scripts",
         `https://rcph-smz.github.io/shs_blog/notes/script`],
-    ["learn ai path","https://www.louisbouchard.ai/learnai/"]
+    ["learn ai path","https://www.louisbouchard.ai/learnai/"],
+    ["beat per 60 sec","https://rcph-smz.github.io/shs_blog/notes/script/PHYSIOLOGY%20INDICATORS/formula/counter.html"]
 ])
 
 
