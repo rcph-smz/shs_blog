@@ -72,6 +72,8 @@
     <input type="text" id="intensity" placeholder="percentage e.g. 60%, 80%">
     <label for="rhr">resting heart rate</label>
     <input type="text" id="rhr" placeholder="pulse per 60 seconds e.g. 92">
+    <label for="hr">heart rate</label>
+    <input type="text" id="hr" placeholder="bpm(exertion) e.g. 131">
 
     <div class="result">
         result :
@@ -93,6 +95,7 @@
         const _mhr = document.getElementById("mhr")
         const _rhr = document.getElementById("rhr")
         const _intensity = document.getElementById("intensity")
+        const _hr = document.getElementById("hr")
         const _result = document.querySelector(".result")
 
         for (eventlist of ["click", "keyup"]) {
@@ -109,8 +112,8 @@
                     }
                         break
                     case "rpe": {
-                        const solution = "not done yet"
-                        _result.textContent = `result : ${solution}/bpm`
+                        const solution = Math.floor(parseFloat(_hr.value) / 10)
+                        _result.textContent = `result : range ${solution}`
                     }
                         break
                 }
