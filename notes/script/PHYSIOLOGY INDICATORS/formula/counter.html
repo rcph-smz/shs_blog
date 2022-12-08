@@ -12,12 +12,15 @@
             box-sizing: border-box;
             cursor: default;
         }
+
         *::selection {
             display: none;
         }
+
         body {
             background-color: lavender;
         }
+
         .countdown {
             display: flex;
             justify-content: center;
@@ -34,11 +37,14 @@
         }
     </style>
 </head>
+
 <body>
     <div class="countdown">
         tap to start
     </div>
     <script>
+        // i just speedrun this so it doesn't look well #spaghetti code xd
+
         let reset = true
         let bias = 1
         let def = 60
@@ -46,16 +52,15 @@
         const countdown = document.querySelector(".countdown")
         const audio = new Audio()
 
-        
         function decrease() {
             target -= 1
             return target
         }
-        
+
         function display(text) {
             countdown.textContent = `${text}`
             return text
-        }   
+        }
 
         function speak(text) {
             const msg = new SpeechSynthesisUtterance(target)
@@ -66,10 +71,10 @@
         }
 
         function start(fun) {
-            if(!reset) return 
+            if (!reset) return
             reset = false
             const interval = setInterval(() => {
-                if(target <= 0){
+                if (target <= 0) {
                     target = def + bias
                     reset = true
                     clearInterval(interval)
@@ -81,14 +86,26 @@
                     speak(display(decrease()))
                 }
             }, 1000)
+            return {
+                clear() {
+                    window.addEventListener("dblclick", () => {
+                        target = def + bias
+                        reset = true
+                        clearInterval(interval)
+                        display("tap to start")
+                    })
+                }
+            }
         }
 
-        countdown.addEventListener("click",() => {
-            start()
+        window.addEventListener("click", () => {
+            start().clear()
         })
+
         window.addEventListener("keydown", e => {
-            if(e.keyCode == 32) start()
+            if (e.keyCode == 32) start()
         })
     </script>
 </body>
+
 </html>

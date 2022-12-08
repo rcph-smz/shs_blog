@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thr calculator</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 10vh 20vw;
+        }
+
+        label {
+            text-align: start;
+            text-indent: 2vw;
+            background-color: lavender;
+        }
+
+        label::after {
+            content: " :";
+        }
+
+        input {
+            background-color: aliceblue;
+        }
+
+        input::placeholder {
+            text-align: center;
+        }
+
+        input,
+        label,
+        select,
+        .result {
+            width: 100%;
+
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            box-shadow: 1px 1px 1px pink;
+
+            margin: 10px;
+            padding: 10px;
+            border: solid 1px black;
+            background-color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="option">Method</label>
+    <select id="option">
+        <option value="mhr">mhr method</option>
+        <option value="hrr">hrr method</option>
+        <option value="rpe">rpe method</option>
+    </select>
+
+    <label for="mhr">maximum heart rate</label>
+    <input type="text" id="mhr" placeholder="age e.g. 24">
+    <label for="rhr">resting heart rate</label>
+    <input type="text" id="rhr" placeholder="pulse per 15 seconds e.g. 23">
+    <label for="intensity">intensity/desiredrange</label>
+    <input type="text" id="intensity" placeholder="percentage e.g. 60%, 80%">
+    <div class="result">
+        result :
+    </div>
+    <script>
+        function mhr(age) {
+            // return 206.9 - (0.67 * age)
+            // return (220 − patient's age) × 0.85 beats per minute.
+            return 220 - age
+        }
+        function rhr(pulse) {
+            return pulse * 4
+        }
+        function hrr(mhr, rhr) {
+            return mhr - rhr
+        }
+
+        const _option = document.getElementById("option")
+        const _mhr = document.getElementById("mhr")
+        const _rhr = document.getElementById("rhr")
+        const _intensity = document.getElementById("intensity")
+        const _result = document.querySelector(".result")
+
+        for (eventlist of ["click", "keyup"]) {
+            window.addEventListener(eventlist, () => {
+                switch (_option.value) {
+                    case "mhr": {
+                        const solution = mhr(parseFloat(_mhr.value)) * (parseFloat(_intensity.value) / 100)
+                        _result.textContent = `result : ${solution}`
+                    }
+                        break
+                    case "hrr": {
+                        const solution = (mhr(parseFloat(_mhr.value)) - rhr(parseFloat(_rhr.value))) * (parseFloat(_intensity.value) / 100) + rhr(parseFloat(_rhr.value)) 
+                        _result.textContent = `result : ${solution}`
+                    }
+                        break
+                    case "rpe": {
+                        const solution = "not done yet"
+                        _result.textContent = `result : ${solution}`
+                    }
+                        break
+                }
+            })
+        }
+
+        // console.log(bpm(intensity(hrr(mhr(24),rhr(92)),60), rhr(92)))
+        // console.log(bpm(intensity(hrr(mhr(24),rhr(92)),80), rhr(92)))
+        // console.log(bpm(intensity(hrr(mhr(16),rhr(92)),60), rhr(92)))
+        // console.log((mhr(16) - rhr(92)) * (60 / 100) + rhr(92))
+        // console.log(hrr(mhr(25),rhr(40)) * (40 / 100) + rhr(40))
+        // console.log(hrr(mhr(24),rhr(92)) * (60 / 100) + rhr(92))
+    </script>
+</body>
+
+</html>
