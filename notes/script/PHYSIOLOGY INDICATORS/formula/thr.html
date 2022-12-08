@@ -68,10 +68,11 @@
 
     <label for="mhr">maximum heart rate</label>
     <input type="text" id="mhr" placeholder="age e.g. 24">
-    <label for="rhr">resting heart rate</label>
-    <input type="text" id="rhr" placeholder="pulse per 15 seconds e.g. 23">
     <label for="intensity">intensity/desiredrange</label>
     <input type="text" id="intensity" placeholder="percentage e.g. 60%, 80%">
+    <label for="rhr">resting heart rate</label>
+    <input type="text" id="rhr" placeholder="pulse per 60 seconds e.g. 92">
+
     <div class="result">
         result :
     </div>
@@ -82,7 +83,7 @@
             return 220 - age
         }
         function rhr(pulse) {
-            return pulse * 4
+            return pulse
         }
         function hrr(mhr, rhr) {
             return mhr - rhr
@@ -99,17 +100,17 @@
                 switch (_option.value) {
                     case "mhr": {
                         const solution = mhr(parseFloat(_mhr.value)) * (parseFloat(_intensity.value) / 100)
-                        _result.textContent = `result : ${solution}`
+                        _result.textContent = `result : ${solution}/bpm`
                     }
                         break
                     case "hrr": {
                         const solution = (mhr(parseFloat(_mhr.value)) - rhr(parseFloat(_rhr.value))) * (parseFloat(_intensity.value) / 100) + rhr(parseFloat(_rhr.value)) 
-                        _result.textContent = `result : ${solution}`
+                        _result.textContent = `result : ${solution}/bpm`
                     }
                         break
                     case "rpe": {
                         const solution = "not done yet"
-                        _result.textContent = `result : ${solution}`
+                        _result.textContent = `result : ${solution}/bpm`
                     }
                         break
                 }
@@ -124,5 +125,4 @@
         // console.log(hrr(mhr(24),rhr(92)) * (60 / 100) + rhr(92))
     </script>
 </body>
-
 </html>
