@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naming_and_Writing_Formulas_for_Chemical_Compounds</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="note-object">
+        <div class="note-title">
+            script 
+        </div>
+        <div class="note-content-wrapper">
+            <div class="note-content">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        const documents = {
+
+        }
+
+        const body = document.body
+
+        function note_object(title,contents) {
+            const note_object = document.createElement("div")
+            note_object.setAttribute("class","note-object")
+
+            const note_title = document.createElement("div")
+            note_title.setAttribute("class","note-title")
+            note_title.textContent = title
+            note_object.appendChild(note_title)
+
+            const note_content_wrapper = document.createElement("div")
+            note_content_wrapper.setAttribute("class","note-content-wrapper")
+            note_object.appendChild(note_content_wrapper)
+
+            for(c of contents){
+                const note_content = document.createElement("div")
+                note_content.setAttribute("class","note-content")
+                note_content.textContent = c
+                note_content_wrapper.appendChild(note_content)
+            }
+
+            body.appendChild(note_object)
+        }
+
+        // note_object(`Assignment oral coms`,[`test`,"only"])
+    </script>
+</body>
+</html>
