@@ -46,6 +46,8 @@
         const countdown = document.querySelector(".countdown")
         const audio = new Audio()
 
+        
+
         function decrease() {
             target -= 1
             return target
@@ -53,7 +55,16 @@
         
         function display(text) {
             countdown.textContent = `${text}`
+            return text
         }   
+
+        function speak(text) {
+            const msg = new SpeechSynthesisUtterance(target)
+            msg.rate = 2
+            // msg.voice = speechSynthesis.getVoices()[2]
+            speechSynthesis.cancel()
+            speechSynthesis.speak(msg)
+        }
 
         function start(fun) {
             if(!reset) return 
@@ -68,7 +79,7 @@
                 else {
                     audio.src = "../audio/1 Second Radial Timer [4K UHD].mp3"
                     audio.play()
-                    display(decrease())
+                    speak(display(decrease()))
                 }
             }, 1000)
         }
