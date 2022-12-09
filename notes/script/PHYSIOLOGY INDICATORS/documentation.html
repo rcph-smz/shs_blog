@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documentation</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .note-content {
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+    <div class="note-object">
+        <div class="note-title">
+            documentation
+        </div>
+        <div class="note-content-wrapper">
+            <div class="note-content">
+                documentation
+
+                mhr means "maximum heart rate"
+                rhr means "resting heart rate" or "heart rate resting"
+                hrr means "heart rate reserve"
+                thr means "target heart rate"
+
+
+                mhr = 220 - age
+                rhr = "count of your pulse per minute e.g. 92 or 72"
+                hrr = mhr - rhr "hrr means difference(minus sign in math) between mhr and rhr"
+
+                example:
+
+                mhr = 220 - 24
+                mhr = 196
+                rhr = 92 (count your heart pulse in one minute)
+                hrr = 196 - 92
+                hrr = 104
+
+                mhr = 196, hrr = 104
+
+                find thr:
+
+                mhr method:
+                thr = mhr * intensity
+
+                hrr method:
+                hrr = (mhr - rhr) * intensity + rhr
+
+                example:
+
+                thr(mhr method) = 196 * 80%
+                thr(mhr method) = 156.8/bpm
+
+                thr(hrr method) = (196 - 92) * 80% + 92
+                thr(hrr method) = 175.2/bpm
+
+                find rpe:
+
+                rpe = bpm/10
+
+                example:
+
+                rpe = 171bpm/10
+                rpe = 17.1 "then remove any decimal/floor"
+                rpe = 17
+
+                faq:
+
+                - what is the value of mhr? 220(given) minus your "age"
+                - how to find my rhr? relax your body(just do nothing that's it) and then count your heart pulse within
+                60seconds then that's it.
+                - where did intensity came from is it given? It depends on how hard the exercise was, for example the
+                moderate was around 40% to 59%(hrr) and 55% to 69%(mhr), check the table at google
+                - what is target heart rate? it was your "heart beat per minute" when you're doing a exercise e.g.
+                running
+                - how to find rpe? formula was bpm/10, example 131/10 = 13.1 ----> "scale 13", (we're using a 1982 rpe)
+            </div>
+        </div>
+    </div>
+    <script>
+        const documents = {
+
+        }
+
+        const body = document.body
+
+        function note_object(title, contents) {
+            const note_object = document.createElement("div")
+            note_object.setAttribute("class", "note-object")
+
+            const note_title = document.createElement("div")
+            note_title.setAttribute("class", "note-title")
+            note_title.textContent = title
+            note_object.appendChild(note_title)
+
+            const note_content_wrapper = document.createElement("div")
+            note_content_wrapper.setAttribute("class", "note-content-wrapper")
+            note_object.appendChild(note_content_wrapper)
+
+            for (c of contents) {
+                const note_content = document.createElement("div")
+                note_content.setAttribute("class", "note-content")
+                note_content.textContent = c
+                note_content_wrapper.appendChild(note_content)
+            }
+
+            body.appendChild(note_object)
+        }
+
+        // note_object(`Assignment oral coms`,[`test`,"only"])
+    </script>
+</body>
+
+</html>
