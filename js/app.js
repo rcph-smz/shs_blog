@@ -60,7 +60,7 @@ function set_tables(table_lists) {
     }
 }
 set_tables([
-    ["Escape from Senom","https://rcph-smz.github.io/app/Escape From Senom.zip"],
+    ["Escape from Senom","https://github.com/rcph-smz/shs_blog/raw/main/app/Escape%20From%20Senom.zip"],
     ["Prayer",
         `Lord, Almighty, we thank you for the gift of life. We thank you for the blessings that you have showered upon us. Forgive us for our mistake, as we forgive those who have mistaken against us. We pray for healing. We pray for peace. We pray for blessings. We ask for your guidance as we start our class for today. Keep us safe, Oh Lord. These we asked in the name of Jesus, Our Lord, Amen.`
     ],
