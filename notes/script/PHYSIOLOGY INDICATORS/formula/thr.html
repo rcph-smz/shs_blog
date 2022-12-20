@@ -54,28 +54,33 @@
             padding: 10px;
             border: solid 1px black;
             background-color: inherit;
+
+            display: none;
+        }
+        .visible {
+            display: block;
         }
     </style>
 </head>
 
 <body>
-    <label for="option">Method</label>
-    <select id="option">
+    <label for="option" class="visible">Method</label>
+    <select id="option" class="visible">
         <option value="mhr">mhr method</option>
         <option value="hrr">hrr method</option>
         <option value="rpe">rpe method</option>
     </select>
 
-    <label for="mhr">maximum heart rate</label>
-    <input type="text" id="mhr" placeholder="age e.g. 24">
-    <label for="intensity">intensity/desiredrange</label>
-    <input type="text" id="intensity" placeholder="percentage e.g. 60%, 80%">
-    <label for="rhr">resting heart rate</label>
-    <input type="text" id="rhr" placeholder="pulse per 60 seconds e.g. 92">
-    <label for="hr">heart rate</label>
-    <input type="text" id="hr" placeholder="bpm(exertion) e.g. 131">
+    <label for="mhr" data-mhr="">maximum heart rate</label>
+    <input type="text" id="mhr" data-mhr="" placeholder="age e.g. 24">
+    <label for="intensity" data-intensity>intensity/desiredrange</label>
+    <input type="text" id="intensity" data-intensity placeholder="percentage e.g. 60%, 80%">
+    <label for="rhr" data-rhr>resting heart rate</label>
+    <input type="text" id="rhr" data-rhr placeholder="pulse per 60 seconds e.g. 92">
+    <label for="hr" data-hr>heart rate</label>
+    <input type="text" id="hr" data-hr placeholder="bpm(exertion) e.g. 131">
 
-    <div class="result">
+    <div class="result visible">
         result :
     </div>
     <script>
@@ -100,18 +105,38 @@
 
         for (eventlist of ["click", "keyup"]) {
             window.addEventListener(eventlist, () => {
+
+                for(i of [...document.querySelectorAll("[data-mhr]"),...document.querySelectorAll("[data-intensity]"),...document.querySelectorAll("[data-rhr]"),...document.querySelectorAll("[data-hr]")]){
+                    i.style.display = "none"
+                }
+
                 switch (_option.value) {
                     case "mhr": {
+
+                        for(e of [...document.querySelectorAll("[data-mhr]"),...document.querySelectorAll("[data-intensity]")]){
+                            e.style.display = "block";
+                        }
+
                         const solution = mhr(parseFloat(_mhr.value)) * (parseFloat(_intensity.value) / 100)
                         _result.textContent = `result : ${solution}/bpm`
                     }
                         break
                     case "hrr": {
-                        const solution = (mhr(parseFloat(_mhr.value)) - rhr(parseFloat(_rhr.value))) * (parseFloat(_intensity.value) / 100) + rhr(parseFloat(_rhr.value)) 
+                        
+                        for(e of [...document.querySelectorAll("[data-mhr]"),...document.querySelectorAll("[data-intensity]"),...document.querySelectorAll("[data-rhr]")]){
+                            e.style.display = "block";
+                        }
+
+                        const solution = (mhr(parseFloat(_mhr.value)) - rhr(parseFloat(_rhr.value))) * (parseFloat(_intensity.value) / 100) + rhr(parseFloat(_rhr.value))
                         _result.textContent = `result : ${solution}/bpm`
                     }
                         break
                     case "rpe": {
+
+                        for(e of [...document.querySelectorAll("[data-hr]")]){
+                            e.style.display = "block";
+                        }
+
                         const solution = Math.floor(parseFloat(_hr.value) / 10)
                         _result.textContent = `result : scale ${solution}`
                     }
@@ -128,4 +153,5 @@
         // console.log(hrr(mhr(24),rhr(92)) * (60 / 100) + rhr(92))
     </script>
 </body>
+
 </html>
